@@ -12,7 +12,7 @@
     flex-direction: row;
     list-style: none;
     padding: 12px;
-    background-color: aquamarine;
+    background-color: rgb(133, 253, 213);
   }
   #navbar ul li a{
     font-family: 'Patrick Hand', cursive;
