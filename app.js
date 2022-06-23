@@ -2,12 +2,11 @@ const express=require('express');
 const path = require("path");
 const bodyparser = require("body-parser");
 // const mongoose = require("mongoose");
-// mongoose.connect('mongodb://localhost/contactfood',{useNewUrlParer: true});
 const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/tourism');
 
-let port=process.env.PORT || 8080;
+const port=process.env.PORT || 8080;
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
