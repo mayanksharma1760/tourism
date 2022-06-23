@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .container{
+    height: 500px;
+
+    margin-top: 15px ;
+  }
+  h1{
+    text-align: center;
+    padding: 10px;
+  }
+ form input{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    
+    margin: 12px auto ;
+    text-align: center;
+    width: 40%;
+    border-radius: 15px;
+  }
+  .btn{
+    background-color: aquamarine;
+    padding: 12px;
+    display: flex;
+    height: 40px;
+    margin: auto;
+    width: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  

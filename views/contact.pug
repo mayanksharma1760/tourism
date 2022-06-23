@@ -1,0 +1,16 @@
+extends base.pug
+block style 
+    style
+        include ../static/contact.css
+        include ../static/style.css
+block content 
+    div.container
+        h1 CONTACT US
+        form(action="/contact",method="post",class="myform") 
+            <input type='text' name='name' placeholder='Enter your name'>
+            <input type='number' name='phone' placeholder='Enter your number'>
+            <input type='number' name='age' placeholder='Enter your age'>
+            <input type='text' name='about' placeholder='Enter about yourself'>
+            button(class='btn') Submit
+    section#footer 
+        | Thankyou for visiting our page 
