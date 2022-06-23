@@ -1,4 +1,7 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Patrick+Hand&family=Yeon+Sung&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +15,11 @@
     background-color: aquamarine;
   }
   #navbar ul li a{
-    padding: 0px 12px;
+    font-family: 'Patrick Hand', cursive;
+    padding: 0px 30px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 30px;
   }
   
   
@@ -84,13 +89,15 @@
   
   .btnone{
     /* background: #00b894; */
-    background: #fff;
-    color: #000;
+    color: black;
     height: 41px;
     width: 95px;
-    padding: 3px;
-    cursor: pointer;
     border-radius: 8px;
+    padding: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;
   }
   
   .btnone:hover {
@@ -101,12 +108,14 @@
   .btntwo{
     background: #00b894;
     color: white;
-    height: 41px;
-    width: 95px;
+    height: 80px;
+    width: 115px;
     border-radius: 8px;
     padding: 3px;
     margin-left: 5px;
     cursor: pointer;
+    font-weight: bold;
+    font-family: 'Patrick Hand', cursive;
 } 
   
   .btntwo:hover {
