@@ -41,5 +41,5 @@ var Contact = mongoose.model('tourist', contactSchema);
   })
 
 app.listen(port,()=>{
-    console.log('succesfully started on port 8080')
+    console.log('succesfully start on port 8080')
 })
