@@ -106,6 +106,7 @@
   }
   
   .btntwo{
+    font-size: 22px;
     background: #00b894;
     color: white;
     height: 80px;
@@ -158,5 +159,5 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-
+    font-family: 'Patrick Hand', cursive;
   }

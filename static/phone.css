@@ -1,0 +1,49 @@
+@media only screen and (max-width : 1000px){
+    body{
+      /* background: #FF5D50; */
+    }
+    #navbar ul li a{
+        color: rgb(0, 140, 255);
+        font-size: 50px;
+       
+    }
+    #navbar ul li{
+        font-size: 1rem;
+    }
+    #navbar ul{
+        height: 345px;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c0edde;
+    }
+    .btntwo{
+        font-size: 35px;
+    }
+    .btnone{
+        height: 35px;
+
+    }
+    section h3{
+        font-size: 50px;
+    }
+    section h1{
+        font-size: 60px;
+    }
+    section p{
+        font-size: 50px;
+    }
+    section a{
+        font-size: 30px;
+    }
+span{
+    font-size: 60px;
+}
+
+ #footer{
+        font-size: 55px;
+        height: 75px;
+    }
+}
+
