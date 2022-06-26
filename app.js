@@ -6,7 +6,6 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/tourism');
 
-const port=process.env.PORT || 8080;
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
@@ -40,6 +39,6 @@ var Contact = mongoose.model('tourist', contactSchema);
 })
   })
 
-app.listen(port,()=>{
-    console.log('succesfully start on port 8080')
-})
+  app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
