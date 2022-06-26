@@ -4,7 +4,16 @@ const bodyparser = require("body-parser");
 // const mongoose = require("mongoose");
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/tourism');
+mongoose.connect(
+  process.env.MONGODB_URL ,
+  {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  },
+  () => {
+    console.log("db connected")
+  }
+);
 
 const port=process.env.PORT || 8080;
 // EXPRESS SPECIFIC STUFF
