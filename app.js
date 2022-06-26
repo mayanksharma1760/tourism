@@ -6,6 +6,12 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/tourism');
 
+
+
+const server = http.createServer(app);
+
+
+
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
