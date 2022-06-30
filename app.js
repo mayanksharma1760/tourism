@@ -1,21 +1,29 @@
 const express=require("express");
 const path = require("path");
 const bodyparser = require("body-parser");
-// const mongoose = require("mongoose");
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect(
-  process.env.MONGODB_URL ,
-  {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  },
-  () => {
-    console.log("db connected")
-  }
-);
+// const Customer = require("customer");
+require("dotenv").config();
 
-const port=process.env.PORT || 8080;
+const port=process.env.PORT
+const uri=process.env.DB_URL;
+
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB database connection established successfully.");
+});
+
+
+
+
+
+
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static')) // For serving static files
 app.use(express.urlencoded())
@@ -32,14 +40,18 @@ app.get('/contact',(req,res)=>{
 })
 
 
+
+// const Schema = mongoose.Schema;
+
+// const Customer = mongoose.model("customer", customerSchema);
+
 var contactSchema = new mongoose.Schema({
     name: String,
     phone: String,
     age: String,
     about: String
   });
-var Contact = mongoose.model('tourist', contactSchema);
-
+var Contact = mongoose.model('traveller', contactSchema);
   app.post('/contact', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(()=>{
@@ -47,8 +59,9 @@ var Contact = mongoose.model('tourist', contactSchema);
     }).catch(()=>{
     res.status(400).send('item was not saved to the databse')
 })
-  })
+  }) 
+
 
   app.listen(port, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    console.log(`Express server listening on ${port}`);
   });
