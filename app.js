@@ -11,7 +11,7 @@ const uri=process.env.DB_URL;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true, 
 });
 
 const connection = mongoose.connection;
